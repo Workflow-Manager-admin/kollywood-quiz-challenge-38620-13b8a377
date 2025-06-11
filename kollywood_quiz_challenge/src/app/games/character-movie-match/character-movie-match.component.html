@@ -1,0 +1,22 @@
+<div class="cmm-container" *ngIf="!loading && pairs.length">
+  <h2>Character-Movie Match</h2>
+  <p>Drag each character to guess their movie!</p>
+  <div class="cmm-lists">
+    <div class="cmm-chars">
+      <h4>Characters</h4>
+      <div class="cmm-char" *ngFor="let pair of pairs" cdkDrag>{{ pair.character }}</div>
+    </div>
+    <div class="cmm-movies">
+      <h4>Movies</h4>
+      <div
+        class="cmm-movie-drop"
+        *ngFor="let movie of questions"
+        (drop)="match(pairs[0].character, movie)"
+        cdkDropList
+      >
+        {{movie}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="loader" *ngIf="loading">Loading quiz...</div>

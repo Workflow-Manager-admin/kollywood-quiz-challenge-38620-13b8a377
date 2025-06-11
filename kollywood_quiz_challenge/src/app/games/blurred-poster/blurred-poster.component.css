@@ -1,0 +1,21 @@
+.quiz-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(125deg, #fc03c6 65%, #fff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.2rem;
+}
+h2 {
+  color: #fc03c6;
+  margin-bottom: 1.9rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+.loader {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fc03c6;
+  margin-top: 7rem;
+}

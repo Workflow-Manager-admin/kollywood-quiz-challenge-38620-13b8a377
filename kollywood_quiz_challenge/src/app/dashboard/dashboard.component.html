@@ -1,0 +1,13 @@
+<div class="dashboard-container">
+  <h2>Welcome, <span class="kq-accent">{{ username }}</span>!</h2>
+  <p>Select a quiz to begin:</p>
+  <div class="quiz-list">
+    <div class="quiz-card" *ngFor="let quiz of quizzes" (click)="startQuiz(quiz.route)">
+      <div class="quiz-icon">{{quiz.icon}}</div>
+      <div>
+        <h3>{{quiz.title}}</h3>
+        <p>{{quiz.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

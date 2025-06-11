@@ -1,0 +1,28 @@
+<div class="results-container" *ngIf="quizType">
+  <div class="results-card">
+    <h2>Results: <span class="quiz-type">{{quizType}}</span></h2>
+    <div class="score">
+      <span>You scored</span>
+      <div class="main-score">{{score}} / {{total}}</div>
+      <div class="score-remark" *ngIf="score === total">Kollywood Mastermind! 🏆</div>
+      <div class="score-remark" *ngIf="score !== total && score >= 7">Excellent Work! 👏</div>
+      <div class="score-remark" *ngIf="score < 7">Keep Practicing!</div>
+    </div>
+    <div class="results-list">
+      <h4>Your Answers</h4>
+      <ul>
+        <li *ngFor="let ans of answers; let i = index">
+          <b>Q{{i+1}}:</b> {{ans.question}}<br>
+          <span
+            [ngClass]="{correct: ans.correct, wrong: !ans.correct}">
+            {{ ans.userAnswer || 'No answer' }} <span *ngIf="ans.correct">✔️</span><span *ngIf="!ans.correct">❌</span>
+          </span>
+          <span class="full-answer" *ngIf="!ans.correct && ans.correctAnswer">
+            → Correct: {{ans.correctAnswer}}
+          </span>
+        </li>
+      </ul>
+    </div>
+    <button class="play-again-btn" (click)="playAgain()">Back to Dashboard</button>
+  </div>
+</div>

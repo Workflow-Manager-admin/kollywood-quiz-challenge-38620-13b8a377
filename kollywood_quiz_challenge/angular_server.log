@@ -9,20 +9,20 @@ The "disableHostCheck" option will not be used because it is not supported by th
 Browser bundles     
 Initial chunk files  | Names            |  Raw size
 polyfills.js         | polyfills        |  90.20 kB | 
-main.js              | main             |  22.59 kB | 
+main.js              | main             |  22.66 kB | 
 styles.css           | styles           |  95 bytes | 
 
-                     | Initial total    | 112.88 kB
+                     | Initial total    | 112.96 kB
 
 
 Server bundles      
 Initial chunk files  | Names            |  Raw size
 polyfills.server.mjs | polyfills.server | 572.91 kB | 
-chunk-6XEG6CM6.mjs   | -                |  23.02 kB | 
+chunk-ZB4FDNTA.mjs   | -                |  23.10 kB | 
 server.mjs           | server           |   1.39 kB | 
 main.server.mjs      | main.server      | 800 bytes | 
 
-Application bundle generation complete. [2.093 seconds]
+Application bundle generation complete. [2.191 seconds]
 
 Watch mode enabled. Watching for file changes...
 NOTE: Raw file sizes do not reflect development server per-request transformations.
@@ -30,21 +30,194 @@ NOTE: Raw file sizes do not reflect development server per-request transformatio
   ➜  Network: http://172.17.0.2:3000/
 ❯ Changes detected. Rebuilding...
 ✔ Changes detected. Rebuilding...
-Browser bundles    
-Initial chunk files | Names       |  Raw size
-main.js             | main        |  22.66 kB | 
+Application bundle generation failed. [0.316 seconds]
+
+✘ [ERROR] Could not resolve "./login/login.component"
+
+    src/app/app.routes.ts:3:49:
+      3 │ ...onent: () => import('./login/login.component').then(m => m.Login...
+        ╵                        ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Server bundles     
-Initial chunk files | Names       |  Raw size
-chunk-ZB4FDNTA.mjs  | -           |  23.10 kB | 
-server.mjs          | server      |   1.39 kB | 
-main.server.mjs     | main.server | 800 bytes | 
+✘ [ERROR] Could not resolve "./dashboard/dashboard.component"
 
-Application bundle generation complete. [0.409 seconds]
+    src/app/app.routes.ts:4:53:
+      4 │ ...t: () => import('./dashboard/dashboard.component').then(m => m.D...
+        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-12:06:12 PM [vite] (ssr) ✨ new dependencies optimized: @angular/common/http
-12:06:12 PM [vite] (ssr) ✨ optimized dependencies changed. reloading
-Page reload sent to client(s).
-12:06:18 PM [vite] (client) ✨ new dependencies optimized: @angular/common/http
-12:06:18 PM [vite] (client) ✨ optimized dependencies changed. reloading
+
+✘ [ERROR] TS2307: Cannot find module './login/login.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:5:47:
+      5 │ ...onent: () => import('./login/login.component').then(m => m.Login...
+        ╵                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/blurred-poster/blurred-poster.component"
+
+    src/app/app.routes.ts:5:63:
+      5 │ ... => import('./games/blurred-poster/blurred-poster.component').th...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './dashboard/dashboard.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:6:51:
+      6 │ ...t: () => import('./dashboard/dashboard.component').then(m => m.D...
+        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/character-movie-match/character-movie-match.component"
+
+    src/app/app.routes.ts:6:70:
+      6 │ ... => import('./games/character-movie-match/character-movie-match....
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/movie-bingo/movie-bingo.component"
+
+    src/app/app.routes.ts:7:60:
+      7 │ ... => import('./games/movie-bingo/movie-bingo.component').then(m =...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './games/blurred-poster/blurred-poster.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:7:61:
+      7 │ ... => import('./games/blurred-poster/blurred-poster.component').th...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/movie-timeline/movie-timeline.component"
+
+    src/app/app.routes.ts:8:63:
+      8 │ ... => import('./games/movie-timeline/movie-timeline.component').th...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './games/character-movie-match/character-movie-match.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:8:68:
+      8 │ ... => import('./games/character-movie-match/character-movie-match....
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './games/movie-bingo/movie-bingo.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:9:58:
+      9 │ ... => import('./games/movie-bingo/movie-bingo.component').then(m =...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/spin-the-wheel/spin-the-wheel.component"
+
+    src/app/app.routes.ts:9:63:
+      9 │ ... => import('./games/spin-the-wheel/spin-the-wheel.component').th...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/cast-combo/cast-combo.component"
+
+    src/app/app.routes.ts:10:59:
+      10 │ ... => import('./games/cast-combo/cast-combo.component').then(m =>...
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './games/movie-timeline/movie-timeline.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:10:61:
+      10 │ ...=> import('./games/movie-timeline/movie-timeline.component').th...
+         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./results/results.component"
+
+    src/app/app.routes.ts:11:51:
+      11 │ ...nt: () => import('./results/results.component').then(m => m.Res...
+         ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './games/spin-the-wheel/spin-the-wheel.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:11:61:
+      11 │ ...=> import('./games/spin-the-wheel/spin-the-wheel.component').th...
+         ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './games/cast-combo/cast-combo.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:12:57:
+      12 │ ... => import('./games/cast-combo/cast-combo.component').then(m =>...
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './results/results.component' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/app.routes.ts:13:49:
+      13 │ ...nt: () => import('./results/results.component').then(m => m.Res...
+         ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./login/login.component"
+
+    src/app/app.routes.ts:3:49:
+      3 │ ...onent: () => import('./login/login.component').then(m => m.Login...
+        ╵                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./dashboard/dashboard.component"
+
+    src/app/app.routes.ts:4:53:
+      4 │ ...t: () => import('./dashboard/dashboard.component').then(m => m.D...
+        ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/blurred-poster/blurred-poster.component"
+
+    src/app/app.routes.ts:5:63:
+      5 │ ... => import('./games/blurred-poster/blurred-poster.component').th...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/character-movie-match/character-movie-match.component"
+
+    src/app/app.routes.ts:6:70:
+      6 │ ... => import('./games/character-movie-match/character-movie-match....
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/movie-bingo/movie-bingo.component"
+
+    src/app/app.routes.ts:7:60:
+      7 │ ... => import('./games/movie-bingo/movie-bingo.component').then(m =...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/movie-timeline/movie-timeline.component"
+
+    src/app/app.routes.ts:8:63:
+      8 │ ... => import('./games/movie-timeline/movie-timeline.component').th...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/spin-the-wheel/spin-the-wheel.component"
+
+    src/app/app.routes.ts:9:63:
+      9 │ ... => import('./games/spin-the-wheel/spin-the-wheel.component').th...
+        ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./games/cast-combo/cast-combo.component"
+
+    src/app/app.routes.ts:10:59:
+      10 │ ... => import('./games/cast-combo/cast-combo.component').then(m =>...
+         ╵               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Could not resolve "./results/results.component"
+
+    src/app/app.routes.ts:11:51:
+      11 │ ...nt: () => import('./results/results.component').then(m => m.Res...
+         ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+

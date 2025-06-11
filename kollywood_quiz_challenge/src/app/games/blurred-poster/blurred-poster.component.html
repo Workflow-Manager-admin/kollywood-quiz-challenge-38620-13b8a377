@@ -1,0 +1,19 @@
+<div class="quiz-wrapper" *ngIf="!loading && questions.length">
+  <h2>Blurred Poster Quiz</h2>
+  <app-quiz-question
+    [question]="questions[currentIdx]"
+    [questionIndex]="currentIdx"
+    [totalQuestions]="total"
+    [userAnswer]="userAnswers[currentIdx]"
+    [showClues]="true"
+    [clues]="clues[currentIdx]"
+    [imageUrl]="questions[currentIdx]?.imageUrl"
+    inputPlaceholder="Movie title"
+    [allowAnswer]="!answerRevealed"
+    [answerRevealed]="answerRevealed"
+    (answer)="setAnswer($event)"
+    (reveal)="reveal()"
+    (next)="next()"
+  ></app-quiz-question>
+</div>
+<div class="loader" *ngIf="loading">Loading Kollywood magic...</div>

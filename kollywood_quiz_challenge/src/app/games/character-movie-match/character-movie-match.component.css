@@ -1,0 +1,45 @@
+.cmm-container {
+  background: linear-gradient(112deg, #ffffff 60%, #fc03c6 100%);
+  padding: 2.2rem 1rem 1rem 1rem;
+  min-height: 100vh;
+}
+h2 {
+  color: #fc03c6;
+  margin-bottom: 1.1rem;
+}
+.cmm-lists {
+  display: flex;
+  gap: 4vw;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.cmm-chars, .cmm-movies {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem 1.2rem;
+  min-width: 200px;
+  box-shadow: 0 4px 24px #fc03c630;
+}
+.cmm-char {
+  margin: .5rem 0;
+  padding: .45rem 1.1rem;
+  background: #fc03c6;
+  color: #fff;
+  border-radius: 6px;
+  cursor: grab;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.cmm-movie-drop {
+  margin: .58rem 0;
+  padding: .55rem .5rem;
+  background: #ffffff;
+  border: 2px solid #fc03c6;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.11s;
+}
+.cmm-movie-drop:hover {
+  background: #fc03c640;
+}

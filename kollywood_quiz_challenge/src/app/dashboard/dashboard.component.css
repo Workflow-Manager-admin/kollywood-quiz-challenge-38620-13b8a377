@@ -1,0 +1,56 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fc03c6 50%, #fff 100%);
+  padding: 2.5rem 1rem 1rem 1rem;
+  text-align: center;
+}
+h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: .7rem;
+}
+.kq-accent {
+  color: #fc03c6;
+  text-shadow: 0 2px 8px #fc03c685;
+}
+.quiz-list {
+  display: grid;
+  gap: 2.5rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2.5rem;
+  justify-items: center;
+}
+.quiz-card {
+  border-radius: 18px;
+  box-shadow: 0 2px 18px #10100e11, 0 6px 36px #fc03c625;
+  background: #fff;
+  color: #10100e;
+  max-width: 330px;
+  min-height: 140px;
+  padding: 1.6rem 1.2rem;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.2s;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  border: 2.2px solid #fc03c6cc;
+}
+.quiz-card:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 7px 35px #fc03c699;
+  border-color: #10100e;
+}
+.quiz-icon {
+  font-size: 2.6rem;
+  margin-right: 0.5rem;
+  user-select: none;
+}
+.quiz-card h3 {
+  color: #fc03c6;
+  margin: 0 0 0.3rem 0;
+}
+.quiz-card p {
+  margin: 0;
+  color: #10100eaf;
+}

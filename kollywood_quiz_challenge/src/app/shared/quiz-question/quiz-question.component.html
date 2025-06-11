@@ -1,0 +1,27 @@
+<div class="kq-question-wrapper">
+  <div class="kq-quiz-progress">
+    <span>Question <b>{{questionIndex + 1}}</b> of <b>{{totalQuestions}}</b></span>
+  </div>
+  <div *ngIf="imageUrl" class="kq-image-holder">
+    <img [src]="imageUrl" alt="Kollywood quiz poster" />
+  </div>
+  <div *ngIf="showClues && clues.length" class="kq-clue-section">
+    <div class="clue-label">Clues:</div>
+    <ul>
+      <li *ngFor="let clue of clues">{{clue}}</li>
+    </ul>
+  </div>
+  <div class="kq-answer-area" *ngIf="allowAnswer && !answerRevealed">
+    <input [placeholder]="inputPlaceholder"
+           [(ngModel)]="tempInput"
+           (ngModelChange)="setAnswer($event)" />
+    <button class="kq-btn" (click)="revealAnswer()">{{revealLabel}}</button>
+  </div>
+  <div class="kq-reveal-answer" *ngIf="answerRevealed && question">
+    <div>
+      <span class="answer-label">Answer:</span>
+      <span class="answer-main">{{question.answer || question.correctAnswer}}</span>
+    </div>
+    <button class="kq-btn next-btn" (click)="goNext()">Next</button>
+  </div>
+</div>
